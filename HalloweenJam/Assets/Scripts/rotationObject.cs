@@ -5,6 +5,7 @@ using UnityEngine;
 public class rotationObject : MonoBehaviour
 {
     public Vector3 rotacion = new Vector3(0, 50, 0);
+    public float speedRotation = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,6 @@ public class rotationObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate((rotacion)* Time.deltaTime);
+        transform.Rotate((rotacion)* speedRotation * Time.deltaTime);
     }
 }

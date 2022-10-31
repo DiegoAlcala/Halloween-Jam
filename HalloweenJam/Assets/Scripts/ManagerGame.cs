@@ -66,7 +66,7 @@ public class ManagerGame : MonoBehaviour
 
     public void GetItemAction()
     {
-        timerController.sumarSegundos(10f);
+        timerController.sumarSegundos(7f);
     }
     public void ResetScene()
     {

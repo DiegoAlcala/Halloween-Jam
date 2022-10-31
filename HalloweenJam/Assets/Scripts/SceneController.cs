@@ -10,7 +10,7 @@ public class SceneController : MonoBehaviour
     public void ReiniciarJuego()
     {
         Debug.Log("Reiniciar porque perdi");
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("GameplayJam");
         
     }
 

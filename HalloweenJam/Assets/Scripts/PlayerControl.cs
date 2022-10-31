@@ -20,7 +20,8 @@ public class PlayerControl : MonoBehaviour
     //---------------------------------------------------- Santiago
     int contador;
     public Text gemas;
-    public SceneSelect managmentEscenas;
+    
+    public AudioClip SoundGem;
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +56,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-     private void ActualizarGemas() 
+    /* private void ActualizarGemas() 
     {
        gemas.text = "Gemas: " + contador + "/10";
     }
@@ -65,9 +66,11 @@ public class PlayerControl : MonoBehaviour
     contador = 0; 
     ActualizarGemas(); 
     }
+    */
 
      public void OnTriggerEnter(Collider other)
     {
+        AudioSource.PlayClipAtPoint(SoundGem, gameObject.transform.position);
         Destroy(other.gameObject); //Destruye objeto collider con el player tenga contacto
         itemController.ActualizarMarcador();
         /*contador = contador + 1; // cada vez que el player tenga contacto con uno collider se le sumara +1 a variable contador

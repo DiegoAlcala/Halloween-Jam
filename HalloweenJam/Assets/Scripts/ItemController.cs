@@ -16,7 +16,7 @@ public class ItemController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        itemText.text = "Items" + items + ("/10");
+        itemText.text = "Items:" + items + ("/26");
         if (items == 0)
         {
             NoItems();
